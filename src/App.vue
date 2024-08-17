@@ -1,19 +1,13 @@
 // This is a SFC or Single Side Component
 
 <template>
-  <section>
-    <h3>Counter: {{ counter }}</h3>
-    <h3>Square: {{ squareCounter }}</h3>
-
-    <div>
-      <button @click="counter++">+1</button>
-      <button @click="counter--">-1</button>
-    </div>
-  </section>
+  <h1>My first Vue App</h1>
+  <hr />
+  <MyCounter />
+  <MyCounter />
+  <MyCounter />
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
-const counter = ref(10);
-const squareCounter = computed(() => counter.value * counter.value);
+import MyCounter from './components/MyCounter.vue';
 </script>
