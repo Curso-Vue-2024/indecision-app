@@ -1,47 +1,19 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
+// This is a SFC or Single Side Component
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <h1>Hola mundo</h1>
 </template>
 
+<script lang="ts" setup>
+console.log('Hola mundo');
+</script>
+
+<!-- 
+Al indicar scoped en el style, solo se aplica a los de este archivo.
+Si no lo ponemos, como toda la App pasa por aquí, los aplica de forma global. 
+-->
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+h1 {
+  color: green;
 }
 </style>
