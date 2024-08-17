@@ -3,9 +3,7 @@
 <template>
   <h1>My first Vue App</h1>
   <hr />
-  <MyCounter />
-  <MyCounter />
-  <MyCounter />
+  <MyCounter :value="5" />
 </template>
 
 <script lang="ts" setup>
