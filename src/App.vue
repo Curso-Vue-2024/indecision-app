@@ -1,19 +1,19 @@
 // This is a SFC or Single Side Component
 
 <template>
-  <h1>Hola mundo</h1>
+  <section>
+    <h3>Counter: {{ counter }}</h3>
+    <h3>Square: {{ squareCounter }}</h3>
+
+    <div>
+      <button @click="counter++">+1</button>
+      <button @click="counter--">-1</button>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
-console.log('Hola mundo');
+import { computed, ref } from 'vue';
+const counter = ref(10);
+const squareCounter = computed(() => counter.value * counter.value);
 </script>
-
-<!-- 
-Al indicar scoped en el style, solo se aplica a los de este archivo.
-Si no lo ponemos, como toda la App pasa por aquí, los aplica de forma global. 
--->
-<style scoped>
-h1 {
-  color: green;
-}
-</style>
