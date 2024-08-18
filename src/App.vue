@@ -1,7 +1,7 @@
 <template>
-
-  <h1>Hola mundo</h1>
-
+  <IndecisionView />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import IndecisionView from '@/views/IndecisionView.vue';
+</script>
